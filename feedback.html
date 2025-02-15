@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Advice</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .advice {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #6a11cb;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2575fc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Advice</h1>
+        <div class="advice" id="advice">Loading your advice...</div>
+        <button onclick="window.location.href='Quiz.html';">Take the Quiz Again</button>
+    </div>
+
+    <script>
+        // Simulate quiz result and advice generation
+        const quizResult = "stress"; // This could be dynamically set based on the quiz
+
+        const adviceData = {
+            stress: "It's okay to feel stressed. Take deep breaths, go for a walk, or write down your thoughts. Remember, you're stronger than you think!",
+            anxiety: "Feeling anxious is natural. Try practicing mindfulness or listening to calming music. Reach out to a trusted friend or counselor if needed.",
+            burnout: "You might be experiencing burnout. Take some time to rest, prioritize self-care, and don't hesitate to delegate tasks or ask for help.",
+            motivation: "Lacking motivation? Set small, achievable goals and celebrate your progress. Surround yourself with positive influences!",
+            happiness: "You're in a great place! Keep spreading positivity and take moments to appreciate the little things in life."
+        };
+
+        function displayAdvice() {
+            const adviceElement = document.getElementById("advice");
+            adviceElement.textContent = adviceData[quizResult] || "Keep going! You're doing amazing.";
+        }
+
+        function goBack() {
+            window.location.href = "Quiz.html"; // Replace with your quiz page URL
+        }
+
+        // Call the function to display advice
+        displayAdvice();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindEase Hub - School Mental Health Quiz</title>
+  <link rel="stylesheet" href="Flow.css">
+</head>
+<body>
+  <header>
+    <h1>MindEase Hub - School Mental Health Quiz</h1>
+    <p>Answer these questions to gain insights into your mental well-being at school.</p>
+  </header>
+
+  <main>
+    <div class="quiz-container">
+      <div id="progress-bar"></div>
+      <div id="question-container">
+        <h2 id="question" class="fade-in"></h2>
+        <form id="quiz-form">
+          <div class="options">
+            <label>
+              <input type="radio" name="answer" value="1">
+              <span id="option1"></span>
+            </label>
+            <label>
+              <input type="radio" name="answer" value="2">
+              <span id="option2"></span>
+            </label>
+            <label>
+              <input type="radio" name="answer" value="3">
+              <span id="option3"></span>
+            </label>
+            <label>
+              <input type="radio" name="answer" value="4">
+              <span id="option4"></span>
+            </label>
+          </div>
+          <button type="button" id="next-btn">Next</button>
+        </form>
+      </div>
+      <div id="result-container" class="hidden">
+        <h2>Your Quiz Result</h2>
+        <p id="result-text"></p>
+        <button onclick="restartQuiz()">Retake Quiz</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
